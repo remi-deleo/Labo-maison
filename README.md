@@ -14,7 +14,7 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 | N° | Lab | Thème | Date |
 |---|---|---|---|
 | 01 | [Vérifier l'intégrité d'une ISO](01-verification-iso/) | Sécurité · PowerShell | 02/11/2026 |
-| 02 | [Sécuriser ses comptes : MFA et gestionnaire de mots de passe](02-securiser-comptes-mfa/) | Sécurité · IAM | 02/11/2026 |
+| 02 | [Sécuriser ses comptes : MFA et gestionnaire de mots de passe](02-securiser-comptes-mfa/) | Sécurité · IAM (Identity and Access Management) | 02/11/2026 |
 
 ## Autres projets
 
