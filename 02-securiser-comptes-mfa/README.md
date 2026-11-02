@@ -1,4 +1,4 @@
-# Sécuriser ses comptes : gestionnaire de mots de passe et MFA
+# Lab 02 – Sécuriser ses comptes : gestionnaire de mots de passe et MFA
 
 **Date :** 1er et 2 novembre 2026
 **Durée :** environ 3 h
@@ -12,7 +12,7 @@
 Mes mots de passe étaient enregistrés dans le gestionnaire de Google, et l'accès à mon compte GitHub était protégé par une double authentification par SMS. Cette configuration présente deux faiblesses :
 
 - **Un point unique de défaillance** : un compte Google compromis donne accès à tous les autres comptes.
-- **Le SMS est le facteur MFA le plus faible** : il est exposé au SIM swapping (vol de la ligne auprès de l'opérateur) et à l'interception.
+- **Le SMS est le facteur MFA (authentification multifacteur) le plus faible** : il est exposé au SIM swapping (vol de la ligne auprès de l'opérateur) et à l'interception.
 
 C'est le type de situation qu'un technicien support rencontre chez un utilisateur ou dans une petite structure sans politique de sécurité des accès.
 
