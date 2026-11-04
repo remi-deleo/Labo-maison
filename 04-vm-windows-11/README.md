@@ -1,11 +1,11 @@
-# Lab 03 – Installer une machine virtuelle Windows 11 sous VirtualBox
+# Lab 04 – Installer une machine virtuelle Windows 11 sous VirtualBox
 
-**Date :** 3 et 4 novembre 2026
+**Date :** 3 novembre 2026 (vérifications le 4)
 **Compétences :** virtualisation, installation de Windows 11, dépannage d'affichage, instantanés (snapshots), organisation des disques
 
 ## Contexte
 
-Pour mon labo maison, j'ai besoin de machines de test isolées de mon système principal : une VM Ubuntu (lab 01 et suivants) et une VM Windows 11, pour travailler sur Active Directory, GPO et outils de support sans risque pour mon PC. Ce lab décrit la création de la VM Windows 11 et le problème d'écran noir rencontré au démarrage.
+Pour mon labo maison, j'ai besoin de machines de test isolées de mon système principal : une VM Ubuntu (lab 03) et une VM Windows 11, pour travailler sur Active Directory, GPO et outils de support sans risque pour mon PC. Ce lab décrit la création de la VM Windows 11 et le problème d'écran noir rencontré au démarrage.
 
 ## Environnement
 
@@ -34,7 +34,9 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 2. Créer la VM avec les réglages ci-dessus et brancher l'ISO Windows 11.
 3. Lancer l'installation. Sur un disque mécanique, elle est lente : compter plusieurs dizaines de minutes.
 4. Vérifier le démarrage jusqu'au bureau.
-5. Créer un instantané **« Installation propre »** pour pouvoir revenir à un état sain.
+5. Éteindre la VM proprement depuis Windows, puis créer un instantané **« Installation propre - 03/11 »** pour pouvoir revenir à un état sain. Les autres mises à jour de Windows sont faites après, pour garder ce point de retour propre.
+
+> La version d'évaluation de Windows 11 Entreprise est valable **90 jours**, donc jusqu'à début février 2027 environ.
 
 ## Problème rencontré : écran noir au démarrage
 
