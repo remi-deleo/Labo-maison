@@ -28,7 +28,7 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 | Processeurs | 2 | Suffisant pour le labo |
 | Type de système | Windows 11 | VirtualBox active alors le TPM 2.0 et le démarrage sécurisé (EFI) |
 | Installation automatique | Désactivée | Faire l'installation à la main pour comprendre chaque étape |
-| Affichage | Contrôleur VMSVGA, mémoire vidéo 128 Mo | Réglage final après le problème d'écran noir (voir plus bas) |
+| Affichage | Contrôleur VMSVGA, mémoire vidéo 128 Mo, sans accélération 3D | Réglages finaux après le problème d'écran noir (voir plus bas) |
 
 ## Démarche
 
@@ -56,6 +56,7 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 - Vérification de la configuration : ISO branchée sur le contrôleur SATA, virtualisation matérielle active dans le BIOS du PC, pas de mode Hyper-V qui gêne.
 
   ![Contrôleur SATA avec le disque virtuel et l'ISO branchés](captures/03-stockage-sata.png)
+- Premier essai sur l'affichage : mémoire vidéo au maximum (128 Mo) et accélération 3D désactivée. **Sans effet**, l'écran restait noir. Ces réglages ont été conservés par la suite.
 - Le clavier n'était pas capturé au message « Press any key » : je n'ai donc pas lancé le démarrage depuis le DVD d'installation.
 - Pour savoir si le problème venait du démarrage ou de l'affichage, j'ai isolé la partie affichage.
 
