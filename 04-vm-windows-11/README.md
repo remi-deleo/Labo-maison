@@ -32,6 +32,8 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 
 1. Créer le dossier `J:\VM`, puis le définir comme dossier par défaut dans VirtualBox (Fichier > Paramètres > Général).
 2. Créer la VM avec les réglages ci-dessus et brancher l'ISO Windows 11.
+
+   ![Création de la VM Windows11-Labo : dossier J:\VM et ISO d'évaluation Windows 11 Entreprise](captures/01-creation-vm.png)
 3. Lancer l'installation. Sur un disque mécanique, elle est lente : compter plusieurs dizaines de minutes.
 4. Vérifier le démarrage jusqu'au bureau.
 5. Éteindre la VM proprement depuis Windows, puis créer un instantané **« Installation propre - 03/11 »** pour pouvoir revenir à un état sain. Les autres mises à jour de Windows sont faites après, pour garder ce point de retour propre.
@@ -42,8 +44,12 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 
 **Symptôme :** la VM est marquée « en fonction », mais l'écran reste noir au démarrage.
 
+![VM Windows11-Labo « En fonction » avec un écran noir](captures/02-ecran-noir.png)
+
 **Diagnostic :**
 - Vérification de la configuration : ISO branchée sur le contrôleur SATA, virtualisation matérielle active dans le BIOS du PC, pas de mode Hyper-V qui gêne.
+
+  ![Contrôleur SATA avec le disque virtuel et l'ISO branchés](captures/03-stockage-sata.png)
 - Le clavier n'était pas capturé au message « Press any key » : je n'ai donc pas lancé le démarrage depuis le DVD d'installation.
 - Pour savoir si le problème venait du démarrage ou de l'affichage, j'ai isolé la partie affichage.
 
