@@ -27,16 +27,22 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 | Mémoire | 4 Go | Minimum exigé par Windows 11 |
 | Processeurs | 2 | Suffisant pour le labo |
 | Type de système | Windows 11 | VirtualBox active alors le TPM 2.0 et le démarrage sécurisé (EFI) |
+| Installation automatique | Désactivée | Faire l'installation à la main pour comprendre chaque étape |
+| Affichage | Contrôleur VMSVGA, mémoire vidéo 128 Mo | Réglage final après le problème d'écran noir (voir plus bas) |
 
 ## Démarche
 
 1. Créer le dossier `J:\VM`, puis le définir comme dossier par défaut dans VirtualBox (Fichier > Paramètres > Général).
-2. Créer la VM avec les réglages ci-dessus et brancher l'ISO Windows 11.
+2. Créer la VM avec les réglages ci-dessus et brancher l'ISO Windows 11. VirtualBox coche par défaut « Proceed with Unattended Installation » : je l'ai **décochée** avant de valider, pour faire l'installation moi-même (la capture ci-dessous a été prise avant ce changement).
 
    ![Création de la VM Windows11-Labo : dossier J:\VM et ISO d'évaluation Windows 11 Entreprise](captures/01-creation-vm.png)
 3. Lancer l'installation. Sur un disque mécanique, elle est lente : compter plusieurs dizaines de minutes.
 4. Vérifier le démarrage jusqu'au bureau.
-5. Éteindre la VM proprement depuis Windows, puis créer un instantané **« Installation propre - 03/11 »** pour pouvoir revenir à un état sain. Les autres mises à jour de Windows sont faites après, pour garder ce point de retour propre.
+
+   ![Bureau de Windows 11 dans la VM, licence d'évaluation affichée](captures/05-bureau-windows.png)
+5. Éteindre la VM proprement depuis Windows, puis créer un instantané **« Installation propre 03/11 »** pour pouvoir revenir à un état sain. Les autres mises à jour de Windows sont faites après, pour garder ce point de retour propre.
+
+   ![Instantané « Installation propre 03/11 »](captures/06-instantane.png)
 
 > La version d'évaluation de Windows 11 Entreprise est valable **90 jours**, donc jusqu'à début février 2027 environ.
 
@@ -57,10 +63,12 @@ Pour mon labo maison, j'ai besoin de machines de test isolées de mon système p
 
 **Solution :** dans les paramètres de la VM (Affichage), passer le contrôleur graphique de **VBoxSVGA** à **VMSVGA**. Après démarrage, la VM affiche le bureau.
 
+![Paramètres d'affichage : contrôleur graphique VMSVGA, mémoire vidéo 128 Mo](captures/04-affichage-vmsvga.png)
+
 ## Résultat
 
 - VM Windows 11 installée et accessible jusqu'au bureau.
-- Instantané « Installation propre » créé.
+- Instantané « Installation propre 03/11 » créé.
 - Problème d'écran noir identifié, expliqué et corrigé.
 
 ## Ce que j'ai appris
