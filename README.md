@@ -15,7 +15,8 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 |---|---|---|---|
 | 01 | [Vérifier l'intégrité d'une ISO](01-verification-iso/) | Sécurité · PowerShell | 02/11/2026 |
 | 02 | [Sécuriser ses comptes : MFA et gestionnaire de mots de passe](02-securiser-comptes-mfa/) | Sécurité · IAM (Identity and Access Management) | 02/11/2026 |
-| 03 | [Installer une VM Windows 11 sous VirtualBox](03-vm-windows-11/) | Virtualisation · dépannage d'affichage | 03-04/11/2026 |
+| 03 | [Installer une VM Ubuntu et réinitialiser un mot de passe perdu](03-vm-ubuntu/) | Virtualisation · Linux · dépannage | 02/11/2026 |
+| 04 | [Installer une VM Windows 11 sous VirtualBox](04-vm-windows-11/) | Virtualisation · dépannage d'affichage | 03/11/2026 |
 
 ## Autres projets
 
