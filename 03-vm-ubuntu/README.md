@@ -34,6 +34,8 @@ Pendant ce lab, j'ai rencontré deux situations courantes en support : un messag
 
 1. Dans VirtualBox : **Nouvelle**, nom de la VM, choix de l'ISO.
 2. Case « Proceed with Unattended Installation » laissée **décochée**. Selon la version de VirtualBox, la question est posée à l'envers (« Skip Unattended Installation ») : il faut lire la phrase exacte avant de cliquer.
+
+   ![Case d'installation automatique laissée décochée](captures/01-installation-automatique-decochee.png)
 3. Démarrage sur **« Try or Install Ubuntu »** (mode live), puis langue et clavier en français, réseau par défaut.
 4. **Installation interactive**, sélection d'applications par défaut, aucun logiciel propriétaire : dans une VM, le matériel est virtuel et ces pilotes ne servent à rien.
 5. Disque : **« Effacer le disque et installer Ubuntu »**. Sans danger ici : Ubuntu ne voit que le disque virtuel de 30 Go, pas les vrais disques du PC.
