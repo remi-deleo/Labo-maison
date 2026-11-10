@@ -24,3 +24,15 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 - [diagnostic-pc](https://github.com/remi-deleo/diagnostic-pc) : script PowerShell de diagnostic d'un poste
 - [carto-reseau](https://github.com/remi-deleo/carto-reseau) : cartographie du réseau maison avec nmap
 
+## Comment ce dépôt est réalisé
+
+Tous les labs sont faits par moi, sur mes propres machines virtuelles
+(VirtualBox, Windows 11 et Ubuntu) : installation, commandes, captures
+d'écran et dépannage.
+
+Je me fais aider par un assistant IA (Claude) pour structurer et relire
+les comptes rendus, comme on le ferait avec un collègue. Les premiers
+commits ont été poussés avec son aide, d'où sa présence dans les
+contributeurs. Depuis novembre 2026, je fais tous les commits moi-même.
+
+Chaque commande publiée ici, je sais l'expliquer et la refaire.
