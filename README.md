@@ -32,8 +32,7 @@ Tous les labs sont faits par moi, sur mes propres machines virtuelles
 d'écran et dépannage.
 
 Je me fais aider par un assistant IA (Claude) pour structurer et relire
-les comptes rendus, comme on le ferait avec un collègue. Les premiers
-commits ont été poussés avec son aide, d'où sa présence dans les
-contributeurs. Depuis novembre 2026, je fais tous les commits moi-même.
+les comptes rendus, comme on le ferait avec un collègue. Chaque commit
+est relu et validé par moi.
 
 Chaque commande publiée ici, je sais l'expliquer et la refaire.
