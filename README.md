@@ -18,6 +18,7 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 | 03 | [Installer une VM Ubuntu et réinitialiser un mot de passe perdu](03-vm-ubuntu/) | Virtualisation · Linux · dépannage | 02/11/2026 |
 | 04 | [Installer une VM Windows 11 sous VirtualBox](04-vm-windows-11/) | Virtualisation · dépannage d'affichage | 03/11/2026 |
 | 05 | [Binaire, encodage et hash : les bases vues par un analyste](05-binaire-encodage-hash/) | Fondamentaux · Base64 · SHA-256 | 09/11/2026 |
+| 06 | [La carte d'identité d'un poste : VM et PC hôte](06-carte-identite-poste/) | Support · inventaire · comptes locaux | 10/11/2026 |
 
 ## Autres projets
 
