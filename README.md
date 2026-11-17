@@ -20,6 +20,7 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 | 05 | [Binaire, encodage et hash : les bases vues par un analyste](05-binaire-encodage-hash/) | Fondamentaux · Base64 · SHA-256 | 09/11/2026 |
 | 06 | [La carte d'identité d'un poste : VM et PC hôte](06-carte-identite-poste/) | Support · inventaire · comptes locaux | 10/11/2026 |
 | 07 | [« Mon PC est lent » : lire les ressources d'un poste Windows](07-ressources-windows/) | Support · diagnostic de performances · processus | 13/11/2026 |
+| 08 | [Diagnostiquer une panne de démarrage (UEFI, disque absent)](08-panne-demarrage-uefi/) | Support · BIOS/UEFI · chaîne de démarrage | 16/11/2026 |
 
 ## Autres projets
 

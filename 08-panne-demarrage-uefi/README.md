@@ -1,4 +1,4 @@
-# Lab 08 : Diagnostiquer une panne de démarrage (UEFI, disque absent)
+# Lab 08 – Diagnostiquer une panne de démarrage (UEFI, disque absent)
 
 **Date :** 16-17/11/2026
 **Environnement :** VirtualBox, VM `Windows11-Labo` (Windows 11 Entreprise évaluation), firmware UEFI, Secure Boot, TPM 2.0
@@ -11,10 +11,18 @@ J'ai simulé une panne courante en support : un poste qui affiche « No bootable
 - Dans les paramètres de la VM : **UEFI** et **Secure Boot** cochés, **TPM 2.0** activé, 4 Go de RAM.
 - Dans Windows (`msinfo32`) : **Mode BIOS : UEFI** et **État du démarrage sécurisé : Activé**.
 
+![Paramètres de la VM : UEFI, Secure Boot, TPM 2.0](captures/01-parametres-vm-uefi.png)
+
+![msinfo32 : mode BIOS UEFI, démarrage sécurisé activé](captures/02-msinfo32.png)
+
 > Sur un vrai poste, `msinfo32` permet de vérifier le mode de démarrage et Secure Boot sans redémarrer.
 
 ## 2. Simulation de la panne
 J'ai retiré le disque virtuel du contrôleur SATA (Configuration > Stockage). Le fichier `.vdi` n'est pas supprimé.
+
+![Contrôleur SATA sans disque](captures/03-sata-sans-disque.png)
+
+![Message d'erreur UEFI au démarrage](captures/04-erreur-uefi.png)
 
 ## 3. Ticket
 
@@ -30,6 +38,8 @@ J'ai retiré le disque virtuel du contrôleur SATA (Configuration > Stockage). L
 | **Solution** | Rebrancher le disque sur le contrôleur SATA. |
 | **Vérification** | La VM redémarre jusqu'à l'écran de connexion Windows. |
 
+![Écran de connexion Windows après correction](captures/05-ecran-connexion.png)
+
 ## 4. Rappel : la chaîne de démarrage
 POST → firmware UEFI → disque de démarrage → bootloader (`bootmgfw.efi`) → noyau Windows → écran de connexion.
 **L'endroit où le démarrage s'arrête indique la zone en panne.** Ici, il s'arrête après le firmware et avant le bootloader : c'est donc le stockage.
@@ -38,10 +48,3 @@ POST → firmware UEFI → disque de démarrage → bootloader (`bootmgfw.efi`) 
 - Lire un message d'erreur UEFI ligne par ligne permet de localiser la panne sans ouvrir le boîtier.
 - Dans VirtualBox, le réglage « Boot Device Order » est marqué **BIOS only** : il n'a aucun effet sur une VM UEFI. En UEFI, l'ordre de démarrage se règle dans le Boot Manager du firmware (touche au démarrage).
 - Angle sécurité : **Secure Boot** refuse les bootloaders non signés, ce qui bloque les bootkits. Un mot de passe BIOS/UEFI empêche de démarrer sur une clé USB pour contourner Windows. Au SOC, un Secure Boot désactivé sur un poste est une alerte à remonter.
-
-## Captures
-1. Paramètres système de la VM (UEFI, Secure Boot, TPM 2.0)
-2. `msinfo32` : Mode BIOS UEFI, démarrage sécurisé activé
-3. Contrôleur SATA sans disque
-4. Message d'erreur UEFI au démarrage
-5. Écran de connexion Windows après correction
