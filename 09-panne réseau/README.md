@@ -1,4 +1,4 @@
-# Lab 07 – Panne réseau simulée, traitée comme un ticket
+# Lab 09 – Panne réseau simulée, traitée comme un ticket
 
 ## Contexte
 VM Windows 11 (VirtualBox). Objectif : diagnostiquer une perte de réseau
