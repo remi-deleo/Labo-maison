@@ -22,6 +22,7 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 | 07 | [« Mon PC est lent » : lire les ressources d'un poste Windows](07-ressources-windows/) | Support · diagnostic de performances · processus | 13/11/2026 |
 | 08 | [Diagnostiquer une panne de démarrage (UEFI, disque absent)](08-panne-demarrage-uefi/) | Support · BIOS/UEFI · chaîne de démarrage | 16/11/2026 |
 | 09 | [Panne réseau simulée, traitée comme un ticket](09-panne-réseau/) | Ticket - diagnostic, causes et résolutions | 18/11/2026 |
+| 10 | [Lire le réseau couche par couche (OSI / TCP-IP)](10-lire-le-reseau-osi-tcpip/) | Réseau · modèle OSI · ipconfig, arp, nslookup, netstat | 23/11/2026 |
 
 ## Autres projets
 

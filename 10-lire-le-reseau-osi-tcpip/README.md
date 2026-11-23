@@ -1,5 +1,9 @@
 # Lab 10 : lire le réseau couche par couche (OSI / TCP-IP)
 
+**Date :** 23/11/2026
+**Environnement :** VirtualBox, VM `Windows11-Labo` (Windows 11 Entreprise évaluation), réseau en mode NAT
+**Compétences :** modèle OSI / TCP-IP, ipconfig, ping, arp, nslookup, netstat, méthode de dépannage
+
 ## Contexte
 Dans une VM Windows 11 (VirtualBox, mode NAT), j'ai relevé avec des commandes de base ce que chaque couche du modèle OSI montre concrètement. Objectif : apprendre à dépanner une panne réseau en partant du bas (câble, puis adresse, puis service).
 
@@ -16,7 +20,7 @@ Pour chaque commande, j'ai noté la couche OSI concernée et ce que j'ai observ�
 | `nslookup microsoft.com` | 7 – Application | serveur lan.home (192.168.1.1) ; 150.171.110.121 + une adresse IPv6 |
 | `netstat -an \| findstr 443` | 4 – Transport | 10.0.2.15:52000 → 150.171.27.10:443, ESTABLISHED |
 
-![netstat](captures/lab10-netstat.png)
+![netstat](captures/01-netstat.png)
 
 ## Ce que j'ai compris
 - Le préfixe 08-00-27 de ma MAC et les adresses 10.0.2.x montrent que ma carte est virtuelle et que la VM est en mode NAT.
