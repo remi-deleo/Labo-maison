@@ -51,8 +51,8 @@ Dans les propriétés de la carte Ethernet : serveur DNS IPv4 remplacé à la ma
 4. `nslookup google.fr` : délai d'attente dépassé.
 5. `nslookup google.fr 8.8.8.8` : réponse correcte → le réseau est sain, c'est le serveur DNS configuré qui ne répond pas.
 
-![ping 8.8.8.8 OK et ping google.fr KO](02-dns-ping.png)
-![nslookup : DNS configuré vs 8.8.8.8](03-dns-nslookup.png)
+![ping 8.8.8.8 OK et ping google.fr KO](captures/02-dns-ping.png)
+![nslookup : DNS configuré vs 8.8.8.8](captures/03-dns-nslookup.png)
 
 ### Cause
 Serveur DNS erroné (`10.0.2.99`, adresse inexistante) saisi dans les propriétés IPv4 de la carte.
@@ -60,7 +60,7 @@ Serveur DNS erroné (`10.0.2.99`, adresse inexistante) saisi dans les propriét�
 ### Solution
 Remettre « Obtenir les adresses des serveurs DNS automatiquement », puis `ipconfig /flushdns` pour vider le cache. `ping google.fr` fonctionne à nouveau.
 
-![ping google.fr OK après réparation](04-dns-repare.png)
+![ping google.fr OK après réparation](captures/04-dns-repare.png)
 
 ## Partie 3 — Panne DHCP (APIPA)
 
@@ -76,8 +76,8 @@ Passage de la carte de la VM du mode **NAT** au mode **Réseau interne** : aucun
 3. `ping google.fr` : échec → sans réseau, pas de résolution non plus.
 4. `ipconfig /release` puis `ipconfig /renew` : toujours sans réponse du serveur DHCP.
 
-![ipconfig /all en APIPA (169.254)](05-apipa-ipconfig.png)
-![ping 8.8.8.8 et google.fr en échec](06-apipa-ping.png)
+![ipconfig /all en APIPA (169.254)](captures/05-apipa-ipconfig.png)
+![ping 8.8.8.8 et google.fr en échec](captures/06-apipa-ping.png)
 
 ### Cause
 Aucun serveur DHCP joignable. Windows s'attribue alors une adresse **APIPA** en `169.254.0.0/16`, non routable. C'est le signe typique « pas de DHCP ».
@@ -85,7 +85,7 @@ Aucun serveur DHCP joignable. Windows s'attribue alors une adresse **APIPA** en 
 ### Solution
 Remettre la carte en mode **NAT**, puis `ipconfig /renew` : l'adresse `10.0.2.15` revient.
 
-![ipconfig /all après retour en NAT](07-apipa-repare.png)
+![ipconfig /all après retour en NAT](captures/07-apipa-repare.png)
 
 ## Ce que j'en retiens
 
