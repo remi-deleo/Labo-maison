@@ -94,3 +94,5 @@ Remettre la carte en mode **NAT**, puis `ipconfig /renew` : l'adresse `10.0.2.15
 - On diagnostique **de bas en haut** : câble, adresse IP, passerelle, DNS.
 - Angle sécurité : un serveur DHCP pirate ou un DNS modifié peut rediriger tout le trafic d'un poste. Une passerelle ou un DNS inattendu doit faire douter.
 - Commandes utilisées : `ipconfig /all`, `/release`, `/renew`, `/flushdns` · `ping` · `nslookup`.
+
+NB : lors de la panne DNS, google.fr se résolvait encore malgré le faux DNS 10.0.2.99. Le poste avait aussi un serveur DNS IPv6 fourni par VirtualBox, qui prenait le relais. J'ai désactivé l'IPv6 sur la carte pour isoler le test, puis je l'ai réactivé lors de la réparation. Leçon : un poste peut avoir plusieurs chemins DNS, et une panne sur l'un d'eux peut passer inaperçue tant qu'un autre répond.
