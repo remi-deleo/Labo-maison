@@ -34,7 +34,7 @@ Remarques :
 - Le DNS `192.168.1.1` est hors du réseau de la VM : il est joint en passant par la passerelle.
 - Le préfixe `08-00-27` de la MAC est celui attribué à VirtualBox : l'adresse trahit une machine virtuelle.
 
-![ipconfig /all en état normal](01-ipconfig-normal.png)
+![ipconfig /all en état normal](captures/01-ipconfig-normal.png)
 
 ## Partie 2 — Panne DNS
 
