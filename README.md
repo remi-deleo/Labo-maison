@@ -24,6 +24,7 @@ Chaque lab suit la même structure : contexte, environnement, démarche, command
 | 09 | [Panne réseau simulée, traitée comme un ticket](09-panne-réseau/) | Ticket - diagnostic, causes et résolutions | 18/11/2026 |
 | 10 | [Lire le réseau couche par couche (OSI / TCP-IP)](10-lire-le-reseau-osi-tcpip/) | Réseau · modèle OSI · ipconfig, arp, nslookup, netstat | 23/11/2026 |
 | 11 | [Pannes DNS et DHCP : lire les symptômes couche par couche](11-dns-dhcp-pannes/) | DNS · DHCP · APIPA · ipconfig, ping, nslookup | 24/11/2026 |
+| 12 | [Windows et Ubuntu côte à côte : processus, mémoire et système de fichiers](12-os-windows-vs-ubuntu/) | Système d'exploitation · RAM et swap · NTFS / ext4 · PowerShell, Bash | 26/11/2026 |
 
 ## Autres projets
 
